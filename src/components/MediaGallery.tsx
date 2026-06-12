@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FadeUp } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
@@ -23,8 +24,87 @@ const stats = [
   { value: "3", label: "Days" },
 ];
 
-// Placeholder image cell
-function ImagePlaceholder({ index, isMobile }: { index: number; isMobile: boolean }) {
+const galleryPhotos = [
+  
+  {
+    src: "/images/jaskanwar.png",
+    alt: "Jaskanwar portrait",
+    title: "Jaskanwar",
+    caption: "Youth innovation and hands-on learning",
+  },
+  {
+    src: "/images/santosh.png",
+    alt: "Santosh portrait",
+    title: "Santosh",
+    caption: "Technology, teaching, and support",
+  },
+  {
+    src: "/images/brown.png",
+    alt: "Brown portrait",
+    title: "Brown",
+    caption: "Leadership and community engagement",
+  }, 
+  {
+    src: "/images/media/image copy 7.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  {
+    src: "/images/media/image.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  {
+    src: "/images/media/image copy.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  }, 
+  {
+    src: "/images/media/image copy 2.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  {
+    src: "/images/media/image copy 3.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  {
+    src: "/images/media/image copy 4.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  {
+    src: "/images/media/image copy 5.png",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  {
+    src: "/images/media/image copy 6.png",
+    alt: "",
+    title: "PembinaValley",
+    caption: "Got covered in the Pembina Valley online news!",
+    link:"https://www.pembinavalleyonline.com/articles/morden-tech-class-aimed-to-open-new-avenues-for-pukatawagan-visitors",
+
+  }, 
+  
+];
+
+function MediaPhoto({ index, src, alt, title, caption, isMobile }: { index: number; src: string; alt: string; title: string; caption: string; isMobile: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.97 }}
@@ -32,31 +112,56 @@ function ImagePlaceholder({ index, isMobile }: { index: number; isMobile: boolea
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: index * 0.07, ease: [0.25, 0.1, 0.25, 1] }}
       style={{
+        position: "relative",
+        overflow: "hidden",
         background: "rgba(255,255,255,0.03)",
         border: "1px solid rgba(255,255,255,0.07)",
-        borderRadius: "10px",
+        borderRadius: "12px",
         aspectRatio: "4 / 3",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        gap: "8px",
       }}
     >
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-        <circle cx="8.5" cy="8.5" r="1.5" />
-        <polyline points="21 15 16 10 5 21" />
-      </svg>
-      <span style={{
-        fontFamily: "var(--font-manrope), sans-serif",
-        fontWeight: 500,
-        fontSize: "11px",
-        letterSpacing: "0.5px",
-        color: "rgba(255,255,255,0.18)",
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes={isMobile ? "50vw" : "25vw"}
+        style={{ objectFit: "cover" }}
+      />
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "linear-gradient(180deg, rgba(2,10,24,0.05) 0%, rgba(2,10,24,0.55) 100%)",
+      }} />
+      <div style={{
+        position: "absolute",
+        left: 0,
+        right: 0,
+        bottom: 0,
+        padding: isMobile ? "16px" : "20px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "4px",
       }}>
-        Photo {index + 1}
-      </span>
+        <span style={{
+          fontFamily: "var(--font-manrope), sans-serif",
+          fontWeight: 600,
+          fontSize: "11px",
+          letterSpacing: "1.2px",
+          color: "#fffbf2",
+          textTransform: "uppercase",
+        }}>
+          {title}
+        </span>
+        <span style={{
+          fontFamily: "var(--font-manrope), sans-serif",
+          fontWeight: 400,
+          fontSize: "13px",
+          lineHeight: 1.45,
+          color: "rgba(255,251,242,0.75)",
+        }}>
+          {caption}
+        </span>
+      </div>
     </motion.div>
   );
 }
@@ -293,14 +398,22 @@ export default function MediaGallery() {
           </div>
         </FadeUp>
 
-        {/* Placeholder photo grid */}
+        {/* Photo grid */}
         <div style={{
           display: "grid",
-          gridTemplateColumns: isMobile ? "1fr 1fr" : isMobileOrTablet ? "1fr 1fr 1fr" : "repeat(4, 1fr)",
+          gridTemplateColumns: isMobile ? "1fr 1fr" : isMobileOrTablet ? "1fr 1fr" : "repeat(4, 1fr)",
           gap: isMobile ? "10px" : "12px",
         }}>
-          {Array.from({ length: isMobile ? 4 : 8 }).map((_, i) => (
-            <ImagePlaceholder key={i} index={i} isMobile={isMobile} />
+          {galleryPhotos.map((photo, i) => (
+            <MediaPhoto
+              key={photo.src}
+              index={i}
+              src={photo.src}
+              alt={photo.alt}
+              title={photo.title}
+              caption={photo.caption}
+              isMobile={isMobile}
+            />
           ))}
         </div>
 

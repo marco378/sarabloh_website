@@ -6,7 +6,7 @@ import { useBreakpoint } from "@/hooks/useBreakpoint";
 const stats = [
   { num: "6", unit: "weeks", label: "Hands-on digital skills training" },
   { num: "8", unit: "weeks", label: "Paid work placement with a real employer" },
-  { num: "1", unit: "device", label: "Laptop or tablet — yours to keep at the end" },
+  { num: "1", unit: "device", label: "Laptop or tablet —> yours to keep at the end" },
 ];
 
 export default function EducationOverview() {
@@ -154,7 +154,7 @@ export default function EducationOverview() {
               color: "rgba(0,0,0,0.7)",
               margin: 0,
             }}>
-              At Sarabloh, we believe every young person deserves a real shot at a good job — no matter where they grow up. Our digital workforce program gives Indigenous youth aged 15 to 21 the training, paid work experience, and tools they need to step into today&apos;s job market with confidence.
+              At Sarabloh, we believe every young person deserves a real shot at a good job, no matter where they grow up. Our digital workforce program gives Indigenous youth aged 15 to 21 the training, paid work experience, and tools they need to step into today&apos;s job market with confidence.
             </p>
             <p style={{
               fontFamily: "var(--font-manrope), sans-serif",
@@ -165,7 +165,7 @@ export default function EducationOverview() {
               color: "rgba(0,0,0,0.7)",
               margin: 0,
             }}>
-              Every participant who completes the program gets to keep a laptop or device. The skills and tools stay in the community — building capacity that lasts long after the program ends.
+              Every participant who completes the program gets to keep a laptop or device. The skills and tools stay in the community, building capacity that lasts long after the program ends.
             </p>
           </div>
         </FadeUp>

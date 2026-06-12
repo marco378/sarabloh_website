@@ -8,7 +8,7 @@ const pillars = [
   {
     label: "Community Ownership",
     title: "The Community Owns What It Builds",
-    desc: "When a project or business operates inside the zone, the community has a real ownership stake. Not a royalty. Not a consultation fee. An actual share of the business — so when it grows, the community grows with it.",
+    desc: "When a project or business operates inside the zone, the community has a real ownership stake. Not a royalty. Not a consultation fee. An actual share of the business, so when it grows, the community grows with it.",
   },
   {
     label: "Local Jobs First",
@@ -18,7 +18,7 @@ const pillars = [
   {
     label: "Money Stays Local",
     title: "Revenue Reinvested in the Community",
-    desc: "A portion of all revenue generated in the zone goes directly back into community priorities — education, housing, health, or whatever the community decides. The community governs how it is spent.",
+    desc: "A portion of all revenue generated in the zone goes directly back into community priorities education, housing, health, or whatever the community decides. The community governs how it is spent.",
   },
   {
     label: "Self-Determination",

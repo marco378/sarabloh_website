@@ -8,7 +8,7 @@ const benefits = [
   {
     category: "Economic Growth",
     title: "Real Jobs. Local Wages.",
-    desc: "Technology companies operating in the zone hire locally. The jobs that get created go to people who live in the community — not to contractors flying in from the city.",
+    desc: "Technology companies operating in the zone hire locally. The jobs that get created go to people who live in the community, not to contractors flying in from the city.",
     color: "#0150cd",
   },
   {
@@ -20,13 +20,13 @@ const benefits = [
   {
     category: "Cultural Preservation",
     title: "Protecting What Matters",
-    desc: "Digital tools help communities protect, document, and share their language, heritage, art, and traditions — on their own terms. Not as a museum piece. As a living, growing part of daily life.",
+    desc: "Digital tools help communities protect, document, and share their language, heritage, art, and traditions on their own terms. Not as a museum piece. As a living, growing part of daily life.",
     color: "#0150cd",
   },
   {
     category: "Resource Sovereignty",
     title: "Communities Control Their Own Land",
-    desc: "Land, energy, and natural resources can generate wealth that stays within the community — rather than flowing out to outside investors who never set foot in the territory.",
+    desc: "Land, energy, and natural resources can generate wealth that stays within the community, rather than flowing out to outside investors who never set foot in the territory.",
     color: "#0150cd",
   },
   {
@@ -38,7 +38,7 @@ const benefits = [
   {
     category: "Transparent Governance",
     title: "Accountability the Community Can See",
-    desc: "Revenue, spending, and decisions are visible to the community. Smart contracts and transparent records mean money goes where it was promised to go — and the community can verify that.",
+    desc: "Revenue, spending, and decisions are visible to the community. Smart contracts and transparent records mean money goes where it was promised to go and the community can verify that.",
     color: "#0150cd",
   },
 ];

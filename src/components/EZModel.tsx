@@ -21,7 +21,7 @@ const parts = [
     part: "Part Two",
     subtitle: "Technology & Operations",
     title: "The Business Engine",
-    desc: "A for-profit operational arm attracts businesses, manages technology projects, and runs day-to-day operations. Profits flow back to the foundation — meaning back to the community. The business does well so the community does well.",
+    desc: "A for-profit operational arm attracts businesses, manages technology projects, and runs day-to-day operations. Profits flow back to the foundation, meaning back to the community. The business does well so the community does well.",
     bullets: [
       "Attracts outside investment and technology companies",
       "Partners with universities, incubators, and global networks",

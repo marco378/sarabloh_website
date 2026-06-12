@@ -66,7 +66,7 @@ export default function MissionVision() {
                 <span style={{ fontWeight: 600, color: "#0150cd" }}>Vision</span>
               </p>
               <p style={{ fontFamily: "var(--font-manrope), sans-serif", fontWeight: 400, fontSize: isMobile ? "15px" : "18px", lineHeight: 1.5, color: "rgba(0,0,0,0.7)", margin: 0 }}>
-                Empowering a Smarter Tomorrow&rdquo; We build innovative solutions in AI, Blockchain, Mobility, and Education — making advanced technology accessible, collaborative, and transformative for individuals and organizations alike.
+                Empowering a Smarter Tomorrow&rdquo; We build innovative solutions in AI, Blockchain, Mobility, and Education making advanced technology accessible, collaborative, and transformative for individuals and organizations alike.
               </p>
             </div>
           </FadeUp>

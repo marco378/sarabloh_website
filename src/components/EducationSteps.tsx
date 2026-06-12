@@ -18,7 +18,7 @@ const steps = [
   {
     num: "03",
     title: "Build a Portfolio of Real Work",
-    desc: "Every participant completes actual projects they can show to employers. Not just certificates. Real examples of real work — that is what opens doors.",
+    desc: "Every participant completes actual projects they can show to employers. Not just certificates. Real examples of real work, that is what opens doors.",
   },
   {
     num: "04",

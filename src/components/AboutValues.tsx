@@ -10,7 +10,7 @@ const values = [
     num: "01",
     title: "Innovation",
     desc: "We embrace creativity and strive to push the boundaries of technology.",
-    detail: "Every problem is an opportunity to build something better. We don't copy — we invent.",
+    detail: "Every problem is an opportunity to build something better. We don't copy, we invent.",
   },
   {
     num: "02",

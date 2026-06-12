@@ -114,7 +114,7 @@ export default function AboutMission() {
             }}>
               A future where technology seamlessly integrates into everyday life, driving progress and creating opportunities for everyone.{" "}
               <span style={{ color: "rgba(0,0,0,0.4)" }}>
-                A connected, intelligent world that uplifts communities and fuels innovation — built on trust, access, and real outcomes.
+                A connected, intelligent world that uplifts communities and fuels innovation, built on trust, access, and real outcomes.
               </span>
             </p>
           </div>
@@ -155,7 +155,7 @@ export default function AboutMission() {
               margin: 0,
               maxWidth: "520px",
             }}>
-              From Pukatawagan to Winnipeg, from small businesses to First Nations governments — we build for the people and places that mainstream technology too often leaves behind.
+              From Pukatawagan to Winnipeg, from small businesses to First Nations governments, we build for the people and places that mainstream technology too often leaves behind.
             </p>
           </div>
         </FadeUp>

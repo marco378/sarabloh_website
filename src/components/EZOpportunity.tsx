@@ -5,9 +5,9 @@ import { FadeUp } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 const canadaItems = [
-  "Access to the US market and a trusted legal system — attractive to global businesses",
+  "Access to the US market and a trusted legal system, attractive to global businesses",
   "World-class universities and a proven track record of producing talented people",
-  "Vast natural resources and land — much of it stewarded by First Nations for generations",
+  "Vast natural resources and land, much of it stewarded by First Nations for generations",
   "A multicultural, multilingual society that draws talent and investment from around the world",
 ];
 
@@ -81,7 +81,7 @@ export default function EZOpportunity() {
               margin: "20px auto 0",
               maxWidth: "560px",
             }}>
-              Countries around the world — Switzerland, Dubai, Singapore, Estonia — have built special economic zones that attract investment, create jobs, and grow their economies. Canada has everything it needs to do the same, led by Indigenous communities.
+              Countries around the world like Switzerland, Dubai, Singapore, Estonia have built special economic zones that attract investment, create jobs, and grow their economies. Canada has everything it needs to do the same, led by Indigenous communities.
             </p>
           </div>
         </FadeUp>
