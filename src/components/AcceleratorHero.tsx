@@ -89,10 +89,10 @@ export default function AcceleratorHero() {
           lineHeight: 0.96,
           letterSpacing: headingTracking,
         }}>
-          <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2", display: "block", justifyContent: "flex-start" }}>
+          <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2",  justifyContent: "flex-start" }}>
             No background needed.
           </SplitText>
-          <SplitText delay={0.38} style={{ fontWeight: 600, color: "#0150cd", display: "block", justifyContent: "flex-start" }}>
+          <SplitText delay={0.38} style={{ fontWeight: 600, color: "#0150cd",  justifyContent: "flex-start" }}>
             Just you and a laptop.
           </SplitText>
         </div>

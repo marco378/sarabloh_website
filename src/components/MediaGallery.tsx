@@ -25,7 +25,6 @@ const stats = [
 ];
 
 const galleryPhotos = [
-  
   {
     src: "/images/jaskanwar.png",
     alt: "Jaskanwar portrait",
@@ -36,161 +35,128 @@ const galleryPhotos = [
     src: "/images/santosh.png",
     alt: "Santosh portrait",
     title: "Santosh",
-    caption: "co-fpunder",
+    caption: "co-founder",
   },
   {
     src: "/images/brown.png",
     alt: "Brown portrait",
     title: "Brown",
     caption: "",
-  }, 
+  },
   {
     src: "/images/media/13.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
   {
     src: "/images/media/image copy 7.png",
     alt: "",
     title: "",
     caption: "",
-
   },
   {
     src: "/images/media/image.png",
     alt: "",
     title: "",
     caption: "",
-
   },
   {
     src: "/images/media/image copy.png",
     alt: "",
     title: "",
     caption: "",
-
-  }, 
+  },
   {
     src: "/images/media/image copy 2.png",
     alt: "",
     title: "",
     caption: "",
-
   },
   {
     src: "/images/media/image copy 3.png",
     alt: "",
     title: "",
     caption: "",
-
   },
   {
     src: "/images/media/image copy 4.png",
     alt: "",
     title: "",
     caption: "",
-
   },
   {
     src: "/images/media/image copy 5.png",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/1.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/2.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/3.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/4.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/5.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/6.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/7.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/8.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/9.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/10.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  , 
   {
     src: "/images/media/11.jpeg",
     alt: "",
     title: "",
     caption: "",
-
   },
-  
-  
-  
 ];
 
 function MediaPhoto({ index, src, alt, title, caption, isMobile }: { index: number; src: string; alt: string; title: string; caption: string; isMobile: boolean }) {

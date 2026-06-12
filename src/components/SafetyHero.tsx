@@ -129,10 +129,10 @@ export default function SafetyHero() {
           letterSpacing: headingTracking,
           textAlign: "center",
         }}>
-          <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2", display: "block" }}>
+          <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2" }}>
             Community Safety
           </SplitText>
-          <SplitText delay={0.38} style={{ fontWeight: 600, color: "#0150cd", display: "block" }}>
+          <SplitText delay={0.38} style={{ fontWeight: 600, color: "#0150cd"}}>
             for First Nations
           </SplitText>
         </div>

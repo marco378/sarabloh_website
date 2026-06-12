@@ -109,10 +109,10 @@ export default function EZHero() {
           alignSelf: "flex-start",
           width: "100%",
         }}>
-          <SplitText delay={0.2} style={{ fontWeight: 400, color: "rgba(255,251,242,0.55)", display: "block", justifyContent: "flex-start" }}>
+          <SplitText delay={0.2} style={{ fontWeight: 400, color: "rgba(255,251,242,0.55)", justifyContent: "flex-start" }}>
             Indigenous-Led
           </SplitText>
-          <SplitText delay={0.35} style={{ fontWeight: 600, color: "#fffbf2", display: "block", justifyContent: "flex-start" }}>
+          <SplitText delay={0.35} style={{ fontWeight: 600, color: "#fffbf2",   justifyContent: "flex-start" }}>
             Economic Zones
           </SplitText>
         </div>
