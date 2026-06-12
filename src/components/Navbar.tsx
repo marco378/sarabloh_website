@@ -7,7 +7,7 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 import { NavLink } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
-const navLinks = ["Home", "About", "Services", "Mobility Solutions","Education" , "Accelerator" , "Nations Forward", "Safety", "Economic Zones",   "Media", "Contact US"];
+const navLinks = ["Home", "About", "Services", "Mobility Solutions","Education" , "Accelerator" , "Nations Forward", "Safety", "Economic Zones",   "Media", "Contact us"];
 
 const getPath = (label: string) => {
   if (label === "Home") return "/";

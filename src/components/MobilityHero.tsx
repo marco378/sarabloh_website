@@ -96,10 +96,10 @@ export default function MobilityHero() {
           lineHeight: 0.96,
           letterSpacing: headingTracking,
         }}>
-          <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2", display: "block" }}>
+          <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2" }}>
             Your Ride, Right
           </SplitText>
-          <SplitText delay={0.38} style={{ fontWeight: 600, color: "#0150cd", display: "block" }}>
+          <SplitText delay={0.38} style={{ fontWeight: 600, color: "#0150cd" }}>
             Where You Need It
           </SplitText>
         </div>

@@ -30,20 +30,27 @@ const galleryPhotos = [
     src: "/images/jaskanwar.png",
     alt: "Jaskanwar portrait",
     title: "Jaskanwar",
-    caption: "Youth innovation and hands-on learning",
+    caption: "co-founder",
   },
   {
     src: "/images/santosh.png",
     alt: "Santosh portrait",
     title: "Santosh",
-    caption: "Technology, teaching, and support",
+    caption: "co-fpunder",
   },
   {
     src: "/images/brown.png",
     alt: "Brown portrait",
     title: "Brown",
-    caption: "Leadership and community engagement",
+    caption: "",
   }, 
+  {
+    src: "/images/media/13.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
   {
     src: "/images/media/image copy 7.png",
     alt: "",
@@ -93,14 +100,96 @@ const galleryPhotos = [
     caption: "",
 
   },
+  , 
   {
-    src: "/images/media/image copy 6.png",
+    src: "/images/media/1.jpeg",
     alt: "",
-    title: "PembinaValley",
-    caption: "Got covered in the Pembina Valley online news!",
-    link:"https://www.pembinavalleyonline.com/articles/morden-tech-class-aimed-to-open-new-avenues-for-pukatawagan-visitors",
+    title: "",
+    caption: "",
 
-  }, 
+  },
+  , 
+  {
+    src: "/images/media/2.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/3.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/4.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/5.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/6.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/7.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/8.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/9.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/10.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  , 
+  {
+    src: "/images/media/11.jpeg",
+    alt: "",
+    title: "",
+    caption: "",
+
+  },
+  
+  
   
 ];
 

@@ -23,6 +23,23 @@ export default function MediaCoverage() {
     bp === "tablet" ? "40px" :
     "70px";
 
+  const coverageItems = [
+    {
+      href: "https://www.pembinavalleyonline.com",
+      publication: "Pembina Valley Online",
+      date: "Saturday, December 20, 2025",
+      author: "Kylee Bailey",
+      title: "Morden tech class aimed to open new avenues for Pukatawagan visitors",
+      summary: "A technology workshop in Morden opened new avenues for visitors from Pukatawagan. Youth and community members who attended the 3-day AI camp produced working applications and left with new skills and pathways into the digital economy.",
+      badge: "Featured Coverage",
+      featured: true,
+    },
+    
+  ];
+
+  const featuredArticle = coverageItems.find((item) => item.featured) ?? coverageItems[0];
+  const moreCoverage = coverageItems.filter((item) => !item.featured);
+
   return (
     <>
       {/* Dark hero portion */}
@@ -74,7 +91,7 @@ export default function MediaCoverage() {
             lineHeight: 0.96,
             letterSpacing: headingTracking,
           }}>
-            <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2", display: "block", justifyContent: "flex-start" }}>
+            <SplitText delay={0.2} style={{ fontWeight: 400, color: "#fffbf2", justifyContent: "flex-start" }}>
               Media Coverage
             </SplitText>
           </div>
@@ -106,7 +123,7 @@ export default function MediaCoverage() {
 
           {/* Featured article card */}
           <motion.a
-            href="https://www.pembinavalleyonline.com"
+            href={featuredArticle.href}
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 24 }}
@@ -148,7 +165,7 @@ export default function MediaCoverage() {
                     color: "#000000",
                     lineHeight: 1.1,
                   }}>
-                    Pembina Valley Online
+                    {featuredArticle.publication}
                   </span>
                   <span style={{
                     fontFamily: "var(--font-manrope), sans-serif",
@@ -157,7 +174,7 @@ export default function MediaCoverage() {
                     color: "rgba(0,0,0,0.45)",
                     lineHeight: 1.5,
                   }}>
-                    Saturday, December 20, 2025 · By Kylee Bailey
+                    {featuredArticle.date} · By {featuredArticle.author}
                   </span>
                 </div>
 
@@ -182,7 +199,7 @@ export default function MediaCoverage() {
                     color: "rgba(0,0,0,0.35)",
                     marginLeft: "4px",
                   }}>
-                    pembinavalleyonline.com
+                    {new URL(featuredArticle.href).hostname}
                   </span>
                 </div>
               </div>
@@ -195,22 +212,23 @@ export default function MediaCoverage() {
                 gap: "16px",
                 background: "#ffffff",
               }}>
-                {/* Featured badge */}
-                <span style={{
-                  display: "inline-flex",
-                  alignSelf: "flex-start",
-                  fontFamily: "var(--font-manrope), sans-serif",
-                  fontWeight: 600,
-                  fontSize: "10px",
-                  letterSpacing: "1.5px",
-                  color: "#0150cd",
-                  textTransform: "uppercase",
-                  border: "1px solid rgba(1,80,205,0.25)",
-                  borderRadius: "100px",
-                  padding: "4px 12px",
-                }}>
-                  Featured Coverage
-                </span>
+                {featuredArticle.badge ? (
+                  <span style={{
+                    display: "inline-flex",
+                    alignSelf: "flex-start",
+                    fontFamily: "var(--font-manrope), sans-serif",
+                    fontWeight: 600,
+                    fontSize: "10px",
+                    letterSpacing: "1.5px",
+                    color: "#0150cd",
+                    textTransform: "uppercase",
+                    border: "1px solid rgba(1,80,205,0.25)",
+                    borderRadius: "100px",
+                    padding: "4px 12px",
+                  }}>
+                    {featuredArticle.badge}
+                  </span>
+                ) : null}
 
                 <p style={{
                   fontFamily: "var(--font-dm-sans), sans-serif",
@@ -221,7 +239,7 @@ export default function MediaCoverage() {
                   color: "rgba(0,0,0,0.9)",
                   margin: 0,
                 }}>
-                  Morden tech class aimed to open new avenues for Pukatawagan visitors
+                  {featuredArticle.title}
                 </p>
 
                 <p style={{
@@ -232,11 +250,86 @@ export default function MediaCoverage() {
                   color: "rgba(0,0,0,0.6)",
                   margin: 0,
                 }}>
-                  A technology workshop in Morden opened new avenues for visitors from Pukatawagan. Youth and community members who attended the 3-day AI camp produced working applications and left with new skills and pathways into the digital economy. The program was organized by Sarabloh Technologies, based in Morden, Manitoba.
+                  {featuredArticle.summary}
                 </p>
               </div>
             </div>
           </motion.a>
+
+          {moreCoverage.length > 0 && (
+            <div style={{
+              marginTop: isMobile ? "32px" : "48px",
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+              gap: isMobile ? "16px" : "24px",
+            }}>
+              {moreCoverage.map((item) => (
+                <motion.a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.55, ease: [0.25, 0.1, 0.25, 1] }}
+                  whileHover={{ y: -4 }}
+                  style={{
+                    display: "block",
+                    textDecoration: "none",
+                    border: "1px solid rgba(0,0,0,0.08)",
+                    borderRadius: "16px",
+                    overflow: "hidden",
+                    boxShadow: "0 4px 18px rgba(0,0,0,0.04)",
+                    background: "#ffffff",
+                  }}
+                >
+                  <div style={{
+                    padding: isMobile ? "28px 20px" : "32px 28px",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "12px",
+                  }}>
+                    <div style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}>
+                      <span style={{
+                        fontFamily: "var(--font-dm-sans), sans-serif",
+                        fontWeight: 700,
+                        fontSize: isMobile ? "18px" : "20px",
+                        letterSpacing: "-0.8px",
+                        color: "rgba(0,0,0,0.9)",
+                        lineHeight: 1.2,
+                      }}>
+                        {item.title}
+                      </span>
+                      <span style={{
+                        fontFamily: "var(--font-manrope), sans-serif",
+                        fontWeight: 400,
+                        fontSize: "13px",
+                        color: "rgba(0,0,0,0.45)",
+                        lineHeight: 1.5,
+                      }}>
+                        {item.publication} · {item.date} · By {item.author}
+                      </span>
+                    </div>
+                    <p style={{
+                      fontFamily: "var(--font-manrope), sans-serif",
+                      fontWeight: 400,
+                      fontSize: "15px",
+                      lineHeight: 1.7,
+                      color: "rgba(0,0,0,0.65)",
+                      margin: 0,
+                    }}>
+                      {item.summary}
+                    </p>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          )}
 
         </div>
       </section>
