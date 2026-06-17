@@ -34,11 +34,39 @@ export default function MediaCoverage() {
       badge: "Featured Coverage",
       featured: true,
     },
+    {
+      href: "https://coinmarketcap.com/community/articles/67a4b4aeb08fc414ccb6745d/",
+      publication: "CoinMarketCap",
+      date: "Saturday, February 06, 2025",
+      author: "DroomDroom",
+      title: "Empowering Indigenous Communities Through Financial Education: A Morden-Based Initiative",
+      summary: "Sarabloh Technologies launched a free Digital Empowerment Course in Morden, Manitoba, to provide Indigenous communities with financial education and practical skills in emerging technologies such as AI, blockchain, prompt engineering, and DAOs. The initiative aims to bridge the digital divide, foster economic sovereignty, and create pathways for sustainable growth and self-governance.",
+      badge: "",
+      featured: true,
+    },
+    {
+      href: "https://www.binance.com/en/square/post/19945612044985",
+      publication: "Binance",
+      date: "Saturday, February 06, 2025",
+      author: "DroomDroom",
+      title: "Empowering Indigenous Communities Through Financial Education: A Morden-Based Initiative",
+      summary: "Sarabloh Technologies launched a free Digital Empowerment Course in Morden, Manitoba, to provide Indigenous communities with financial education and practical skills in emerging technologies such as AI, blockchain, prompt engineering, and DAOs. The initiative aims to bridge the digital divide, foster economic sovereignty, and create pathways for sustainable growth and self-governance.",
+      badge: "",
+      featured: true,
+    },
     
   ];
 
-  const featuredArticle = coverageItems.find((item) => item.featured) ?? coverageItems[0];
-  const moreCoverage = coverageItems.filter((item) => !item.featured);
+  // Deduplicate coverage items by `href` to avoid rendering/React key collisions
+  const uniqueCoverageItems = Object.values(
+    coverageItems.reduce((acc, item) => {
+      if (!acc[item.href]) acc[item.href] = item;
+      return acc;
+    }, {} as Record<string, any>)
+  );
+
+  const featuredArticle = uniqueCoverageItems.find((item) => item.featured) ?? uniqueCoverageItems[0];
+  const moreCoverage = uniqueCoverageItems.filter((item) => item !== featuredArticle);
 
   return (
     <>
@@ -263,9 +291,9 @@ export default function MediaCoverage() {
               gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
               gap: isMobile ? "16px" : "24px",
             }}>
-              {moreCoverage.map((item) => (
+              {moreCoverage.map((item, idx) => (
                 <motion.a
-                  key={item.href}
+                  key={`${item.href}-${idx}`}
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
