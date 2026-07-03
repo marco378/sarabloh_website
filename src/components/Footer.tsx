@@ -5,7 +5,7 @@ import Link from "next/link";
 import { FadeUp } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
-const links = ["Home", "About", "Mobility Solutions", "Services", "Nations Forward", "Accelerator", "Safety", "Education"];
+const links = ["Home", "About", "Mobility Solutions", "Services", "Nations Forward", "Accelerator", "Safety", "Education", "Contact"];
 const getPath = (label: string) => {
   if (label === "Home") return "/";
   return "/" + label.toLowerCase().replace(/\s+/g, "-");
