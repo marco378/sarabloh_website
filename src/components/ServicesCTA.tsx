@@ -74,7 +74,7 @@ export default function ServicesCTA() {
 
           <FadeUp delay={0.15}>
             <AnimatedButton
-              href="mailto:info@sarabloh.ca?subject=Free%20Consultation%20Request"
+              href="mailto:browneagle@sarabloh.ca?subject=Free%20Consultation%20Request"
               fullWidthMobile
               style={{
                 background: "#0150cd",
