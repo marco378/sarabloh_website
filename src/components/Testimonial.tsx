@@ -7,17 +7,10 @@ import { FadeUp } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 const testimonials = [
-  {
-    name: "Brown Eagle",
-    role: "Operations Lead, Sarabloh Technologies",
-    quote: "“A 16-year-old from Pukatawagan built a working app in three days. That’s not potential. That’s proof.”",
-    avatar: "/images/brown.png",
-    avatarLeft: "/images/santosh.png",
-    avatarRight: "/images/jaskanwar.png",
-  },
+  
   {
     name: "Jaskanwar Singh",
-    role: "Operations Lead, Sarabloh Technologies",
+    role: "Co-Founder, Sarabloh Technologies",
     quote: '"We don\'t just teach technology, we build the bridge between innovation and the communities that need it most."',
     avatar: "/images/jaskanwar.png",
     avatarLeft: "/images/brown.png",
@@ -31,6 +24,14 @@ const testimonials = [
     avatarLeft: "/images/jaskanwar.png",
     avatarRight: "/images/brown.png",
   },
+  {
+    name: "Brown Eagle",
+    role: "Operations Lead, Sarabloh Technologies",
+    quote: "“A 16 year old from Pukatawagan built a working app in three days. That’s not potential. That’s proof.”",
+    avatar: "/images/brown.png",
+    avatarLeft: "/images/santosh.png",
+    avatarRight: "/images/jaskanwar.png",
+  }
 ];
 
 const slideVariants = {

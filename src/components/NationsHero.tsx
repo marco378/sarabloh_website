@@ -133,7 +133,7 @@ export default function NationsHero() {
           }}
         >
           <AnimatedButton
-            href="/get-started"
+            href="/contact"
             fullWidthMobile
             style={{
               background: "#fffbf2",

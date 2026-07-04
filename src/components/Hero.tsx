@@ -6,7 +6,7 @@ import { useBreakpoint } from "@/hooks/useBreakpoint";
 import AnimatedGradient from "./AnimatedGradient";
 
 export default function Hero() {
-  const { bp, isMobile, isMobileOrTablet } = useBreakpoint();
+  const { bp, isMobile } = useBreakpoint();
 
   const headingSize =
     bp === "mobile" ? "30px" :
@@ -129,7 +129,7 @@ export default function Hero() {
           }}
         >
           <AnimatedButton
-            href="/get-started"
+            href="/contact"
             fullWidthMobile
             style={{
               background: "#fffbf2",

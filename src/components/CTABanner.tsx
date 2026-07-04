@@ -4,7 +4,7 @@ import { FadeUp, AnimatedButton } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 export default function CTABanner() {
-  const { bp, isMobile, isMobileOrTablet } = useBreakpoint();
+  const { bp, isMobile } = useBreakpoint();
 
   const headingSize =
     bp === "mobile" ? "36px" :
@@ -89,7 +89,7 @@ export default function CTABanner() {
 
             <FadeUp delay={0.15}>
               <AnimatedButton
-                href="/get-started"
+                href="/contact"
                 fullWidthMobile
                 style={{
                   background: "#ffffff",

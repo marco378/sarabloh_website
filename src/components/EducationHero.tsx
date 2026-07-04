@@ -131,7 +131,7 @@ export default function EducationHero() {
           style={{ width: isMobile ? "100%" : "auto", paddingLeft: isMobile ? "8px" : 0, paddingRight: isMobile ? "8px" : 0 }}
         >
           <AnimatedButton
-            href="/get-started"
+            href="https://learn.nxtgenedu.academy/products/courses/Web3-AI"
             fullWidthMobile
             style={{
               background: "#fffbf2",

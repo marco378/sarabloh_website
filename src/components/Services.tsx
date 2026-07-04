@@ -193,7 +193,7 @@ export default function Services() {
               {/* Button + arrows on the same row (desktop) */}
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <AnimatedButton
-                  href="/get-started"
+                  href="/contact"
                   fullWidthMobile
                   style={{ background: "#0150cd", color: "#ffffff", fontFamily: "var(--font-manrope), sans-serif", fontWeight: 600, fontSize: "16px", lineHeight: 1.5, letterSpacing: "-0.48px", padding: "10px 22px", borderRadius: "4px", display: "inline-flex", alignItems: "center", whiteSpace: "nowrap" }}
                 >

@@ -8,7 +8,7 @@ const team = [
   
   {
     name: "Jaskanwar Singh",
-    role: "Operations Lead · Sarabloh Technologies",
+    role: "Co-Founder · Sarabloh Technologies",
     bio: "Technology strategist and educator with deep roots in AI and digital workforce development. Driving Sarabloh's education programs, grant proposals, and community partnerships.",
     image: "/images/jaskanwar.png",
   },

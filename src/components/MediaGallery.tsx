@@ -25,24 +25,7 @@ const stats = [
 ];
 
 const galleryPhotos = [
-  {
-    src: "/images/jaskanwar.png",
-    alt: "Jaskanwar portrait",
-    title: "Jaskanwar",
-    caption: "co-founder",
-  },
-  {
-    src: "/images/santosh.png",
-    alt: "Santosh portrait",
-    title: "Santosh",
-    caption: "co-founder",
-  },
-  {
-    src: "/images/brown.png",
-    alt: "Brown portrait",
-    title: "Brown",
-    caption: "",
-  },
+  
   {
     src: "/images/media/13.jpeg",
     alt: "",
