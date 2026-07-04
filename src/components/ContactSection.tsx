@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FadeUp, StaggerContainer, StaggerItem } from "./animations";
+import { FadeUp } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 const weAreOptions = [
@@ -69,13 +69,35 @@ export default function ContactSection() {
   const [focused, setFocused] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const set = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSubmitted(true); }, 900);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        throw new Error(payload?.error || "Something went wrong. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -245,6 +267,19 @@ export default function ContactSection() {
             ) : (
               <FadeUp delay={isMobileOrTablet ? 0.05 : 0.15}>
                 <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                  {error && (
+                    <div style={{
+                      border: "1px solid #fecaca",
+                      background: "#fef2f2",
+                      borderRadius: "10px",
+                      padding: "14px 16px",
+                      fontFamily: "var(--font-manrope), sans-serif",
+                      fontSize: "14px",
+                      color: "#991b1b",
+                    }}>
+                      {error}
+                    </div>
+                  )}
 
                   {/* Name + Organization */}
                   <div style={{
