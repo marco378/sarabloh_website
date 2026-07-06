@@ -52,9 +52,16 @@ export async function POST(request: Request) {
   const collaboration = clean(body.collaboration);
   const message = clean(body.message);
 
-  if (!name || !email || !message) {
+  if (!name || !organization || !email || !phone || !weAre || !collaboration || !message) {
     return NextResponse.json(
-      { error: "Name, email, and message are required." },
+      { error: "All fields are required." },
+      { status: 400 },
+    );
+  }
+
+  if (!/^\d+$/.test(phone)) {
+    return NextResponse.json(
+      { error: "Phone number must contain digits only." },
       { status: 400 },
     );
   }

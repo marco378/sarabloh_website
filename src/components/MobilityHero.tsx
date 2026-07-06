@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useCallback } from "react";
 import { SplitText, AnimatedButton } from "./animations";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import AnimatedGradient from "./AnimatedGradient";
@@ -22,6 +23,13 @@ export default function MobilityHero() {
     bp === "mobile" ? "20px" :
     bp === "tablet" ? "40px" :
     "70px";
+
+  const scrollToFeatures = useCallback(() => {
+    document.getElementById("features")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, []);
 
   return (
     <section
@@ -135,9 +143,16 @@ export default function MobilityHero() {
             width: isMobile ? "100%" : "auto",
           }}
         >
-          <AnimatedButton
-            href="#features"
-            fullWidthMobile
+          <motion.button
+            type="button"
+            onClick={scrollToFeatures}
+            whileHover={isMobile ? undefined : {
+              y: -2,
+              scale: 1.03,
+              boxShadow: "0 8px 24px rgba(0,0,0,0.18)",
+            }}
+            whileTap={{ y: 0, scale: 1, boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             style={{
               background: "#0150cd",
               color: "#fffbf2",
@@ -151,10 +166,14 @@ export default function MobilityHero() {
               alignItems: "center",
               justifyContent: "center",
               whiteSpace: "nowrap",
+              border: "none",
+              cursor: "pointer",
+              width: isMobile ? "100%" : "auto",
+              minHeight: isMobile ? "44px" : undefined,
             }}
           >
             Learn More
-          </AnimatedButton>
+          </motion.button>
           <AnimatedButton
             href="#demo"
             fullWidthMobile

@@ -63,8 +63,13 @@ export default function ContactSection() {
     "100px";
 
   const [form, setForm] = useState({
-    name: "", organization: "", email: "", phone: "",
-    weAre: weAreOptions[0], collaboration: collaborationOptions[0], message: "",
+    name: "",
+    organization: "",
+    email: "",
+    phone: "",
+    weAre: "",
+    collaboration: "",
+    message: "",
   });
   const [focused, setFocused] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -72,6 +77,10 @@ export default function ContactSection() {
   const [error, setError] = useState<string | null>(null);
 
   const set = (k: string, v: string) => setForm((f) => ({ ...f, [k]: v }));
+
+  const setPhone = (value: string) => {
+    setForm((f) => ({ ...f, phone: value.replace(/\D/g, "") }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -305,6 +314,7 @@ export default function ContactSection() {
                       <input
                         type="text"
                         placeholder="Organization name"
+                        required
                         value={form.organization}
                         onChange={(e) => set("organization", e.target.value)}
                         onFocus={() => setFocused("org")}
@@ -337,9 +347,13 @@ export default function ContactSection() {
                       <label style={labelStyle}>Phone</label>
                       <input
                         type="tel"
-                        placeholder="Optional"
+                        placeholder="+1 204 555 1234"
+                        required
+                        inputMode="numeric"
+                        autoComplete="tel"
+                        pattern="[0-9]+"
                         value={form.phone}
-                        onChange={(e) => set("phone", e.target.value)}
+                        onChange={(e) => setPhone(e.target.value)}
                         onFocus={() => setFocused("phone")}
                         onBlur={() => setFocused(null)}
                         style={inputStyle(focused === "phone")}
@@ -352,6 +366,7 @@ export default function ContactSection() {
                     <label style={labelStyle}>We Are A...</label>
                     <div style={{ position: "relative" }}>
                       <select
+                        required
                         value={form.weAre}
                         onChange={(e) => set("weAre", e.target.value)}
                         onFocus={() => setFocused("weAre")}
@@ -364,6 +379,9 @@ export default function ContactSection() {
                           paddingRight: "40px",
                         }}
                       >
+                        <option value="" disabled>
+                          Select one
+                        </option>
                         {weAreOptions.map((o) => <option key={o}>{o}</option>)}
                       </select>
                       <svg
@@ -380,6 +398,7 @@ export default function ContactSection() {
                     <label style={labelStyle}>Type of Collaboration</label>
                     <div style={{ position: "relative" }}>
                       <select
+                        required
                         value={form.collaboration}
                         onChange={(e) => set("collaboration", e.target.value)}
                         onFocus={() => setFocused("collab")}
@@ -392,6 +411,9 @@ export default function ContactSection() {
                           paddingRight: "40px",
                         }}
                       >
+                        <option value="" disabled>
+                          Select one
+                        </option>
                         {collaborationOptions.map((o) => <option key={o}>{o}</option>)}
                       </select>
                       <svg
