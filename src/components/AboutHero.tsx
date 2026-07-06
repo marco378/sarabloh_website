@@ -123,7 +123,7 @@ export default function AboutHero() {
             paddingRight: isMobile ? "8px" : 0,
           }}
         >
-          Sarabloh Technologis is a pioneering force dedicated to harnessing emerging technologies to address real-world challenges for communities, businesses, and individuals across Canada.
+          Sarabloh Technologies is a pioneering force dedicated to harnessing emerging technologies to address real-world challenges for communities, businesses, and individuals across Canada.
         </motion.p>
       </div>
     </section>
