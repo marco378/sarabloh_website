@@ -92,7 +92,7 @@ export async function POST(request: Request) {
     },
     body: JSON.stringify({
       from: "Sarabloh Website <onboarding@resend.dev>",
-      to: ["aryan.audace@gmail.com"],
+      to: ["info@sarabloh.ca"],
       subject,
       text,
       html,
