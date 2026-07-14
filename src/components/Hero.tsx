@@ -150,7 +150,7 @@ export default function Hero() {
             Get Started
           </AnimatedButton>
           <AnimatedButton
-            href="/learn-more"
+            href="/about"
             fullWidthMobile
             style={{
               border: "1px solid #ffffff",
