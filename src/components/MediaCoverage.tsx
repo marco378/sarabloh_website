@@ -25,7 +25,7 @@ export default function MediaCoverage() {
 
   const coverageItems = [
     {
-      href: "https://www.pembinavalleyonline.com",
+      href: "https://pembinavalleyonline.com/articles/morden-tech-class-aimed-to-open-new-avenues-for-pukatawagan-visitors",
       publication: "Pembina Valley Online",
       date: "Saturday, December 20, 2025",
       author: "Kylee Bailey",
